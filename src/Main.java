@@ -33,7 +33,7 @@ public class Main {
                 System.out.println("Remove item by item index number.");
                 int i = tools.size();
                 for (ArtToolItem stock : tools) {
-                    System.out.println("[" + i + "] " + stock.name + " " + stock.category + " " + stock.quantity);
+                    System.out.printf("[%d] %s %s %d%n", i, stock.name, stock.category, stock.quantity);
                 }
                 tools.remove(Integer.parseInt(scanner.nextLine()));
             } else if (choice.equals("3")) {
@@ -41,7 +41,7 @@ public class Main {
 
                 Integer i = 1; //loops thru the list
                 for (ArtToolItem stock : tools) {
-                    System.out.println("[" + i + "] " + stock.name + " " + stock.category + " " + stock.quantity);
+                    System.out.printf("[%d] %s %s %d%n", i, stock.name, stock.category, stock.quantity);
                     i++;
                 }
                 //prompt to select the index number of the item to be changed
