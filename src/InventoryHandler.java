@@ -2,7 +2,7 @@ import java.util.Scanner;
 public class InventoryHandler{
 
      public static ArtToolItem categoryChoice(String name, Integer quantity){
-        System.out.println("Which category does the item belong?\n" + "[1] Brush\n" + "[2] Paint\n" + "[3] Pencil\n" + "[4] Canvas\n" + "[5] Paper\n");
+        System.out.println("Choose a category for the item\n" + "[1] Brush\n" + "[2] Paint\n" + "[3] Pencil\n" + "[4] Canvas\n" + "[5] Paper\n");
         Scanner scanner = new Scanner(System.in);
         int itemCat = Integer.parseInt(scanner.nextLine());
 

@@ -17,7 +17,7 @@ public class Main {
 
         System.out.println("1. Add item to stock.");
         System.out.println("2. Remove item from stock.");
-        System.out.println("3. Change quantity of the item in stock.");
+        System.out.println("3. Change quantity of an item in stock.");
 
         String choice = scanner.nextLine();
             if (choice.equals("1")) {
@@ -30,10 +30,11 @@ public class Main {
                 tools.add(InventoryHandler.categoryChoice(itemName, 0));
 
             } else if (choice.equals("2")) {
-                System.out.println("Remove item by item index number.");
-                int i = tools.size();
+                System.out.println("Remove item.");
+                int i = 1;
                 for (ArtToolItem stock : tools) {
                     System.out.printf("[%d] %s %s %d%n", i, stock.name, stock.category, stock.quantity);
+                    i++;
                 }
                 tools.remove(Integer.parseInt(scanner.nextLine()));
             } else if (choice.equals("3")) {
@@ -45,23 +46,18 @@ public class Main {
                     i++;
                 }
                 //prompt to select the index number of the item to be changed
-                System.out.println("Choose an index number to change quantity of item.");
+                System.out.println("Change quantity of an item.");
 
                 //receives user choice - holds that index number
                 Integer itemIndexNum = Integer.parseInt(scanner.nextLine());
 
                 //points at the address where the item is found in the index
-                //like pointing at a specific mailbox
                 ArtToolItem indexPointer = tools.get(itemIndexNum - 1);
 
-                System.out.println("Input quantity of item to be changed.");
+                System.out.println("Input quantity of an item.");
 
                 Integer quantityAdj = Integer.parseInt(scanner.nextLine());
                 indexPointer.quantity = quantityAdj;
-
-
             }
-
-
     }
 }
